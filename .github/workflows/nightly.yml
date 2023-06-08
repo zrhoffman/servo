@@ -15,7 +15,7 @@ jobs:
     # This job is only useful when run on upstream servo.
     if: github.repository == 'servo/servo' || github.event_name == 'workflow_dispatch'
     name: Create Draft GH Release
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - id: create-release
         run: |
@@ -43,7 +43,7 @@ jobs:
     # This job is only useful when run on upstream servo.
     if: github.repository == 'servo/servo' || github.event_name == 'workflow_dispatch'
     name: Publish GH Release for nightly
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - run: |
           gh api \

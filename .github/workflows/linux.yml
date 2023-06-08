@@ -54,7 +54,7 @@ env:
 jobs:
   build-linux:
     name: Build
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
         with:
@@ -108,7 +108,7 @@ jobs:
   linux-wpt:
     if: ${{ github.ref_name == 'try-wpt' || github.ref_name == 'try-wpt-2020' || inputs.wpt }}
     name: Linux WPT Tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: ["build-linux"]
     env:
       max_chunk_id: 20

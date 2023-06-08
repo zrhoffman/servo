@@ -10,7 +10,7 @@ on:
 jobs:
   decision:
     name: Decision job
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Previous successful build check
         uses: actions/github-script@v6
